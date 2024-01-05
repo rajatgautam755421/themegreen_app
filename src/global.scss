@@ -1,0 +1,141 @@
+// Colors
+
+$primary-color: #06396b;
+$primary-light-color: #85c1e9;
+$secondary-color: #d35400;
+$secondary-light-color: #f1948a;
+$muted: #f5f5f5;
+$muted-light: #ccc;
+
+// Font sizes
+
+$main-heading-font: "Open Sans", sans-serif;
+$secondary-heading-font: "Open Sans", sans-serif;
+$title-font: "Open Sans", sans-serif;
+
+$xs-font-size: 12px;
+$sm-font-size: 14px;
+$md-font-size: 16px;
+$lg-font-size: 18px;
+$xlg-font-size: 24px;
+$xxlg-font-size: 32px;
+
+// Font Weights
+$font-weight: 800;
+
+// margins
+$common-margin: 10px;
+
+// Common styles
+$border-radius-md: 8px;
+$border-radius-sm: 4px;
+$border-radius-lg: 10px;
+$border-radius-xl: 15px;
+$grid-gap: 20px;
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+
+// Base styles
+html,
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+h1 {
+  font-family: $main-heading-font;
+  font-size: $xlg-font-size;
+  padding: 1px 0;
+}
+
+h2 {
+  font-family: $secondary-heading-font;
+  font-size: $lg-font-size;
+  padding: 1px 0;
+}
+
+h3 {
+  font-family: $title-font;
+  font-size: $md-font-size;
+  padding: 1px 0;
+}
+
+p {
+  font-size: $md-font-size;
+}
+
+.xs {
+  font-size: $xs-font-size;
+}
+
+.sm {
+  font-size: $sm-font-size;
+}
+
+.md {
+  font-size: $md-font-size;
+}
+
+.lg {
+  font-size: $lg-font-size;
+}
+.xlg {
+  font-size: $xlg-font-size;
+}
+.xxlg {
+  font-size: $xxlg-font-size;
+}
+
+.p-1 {
+  padding: 5px;
+}
+
+.page-padding {
+  padding: 10px 30px;
+}
+
+@mixin grid-layout {
+  display: grid;
+  grid-gap: $grid-gap;
+}
+
+.card-container {
+  @include grid-layout;
+  grid-template-columns: repeat(4, 1fr);
+
+  .card {
+    width: 100%;
+    background-color: #f0f0f0;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-display: optional;
+  background-color: var(--bg);
+  margin: 10px;
+}
+
+:root {
+  --bg: #070707;
+}

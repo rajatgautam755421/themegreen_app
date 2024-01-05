@@ -1,0 +1,25 @@
+@import "../../global.scss";
+
+.data-pagination {
+  margin: 20px 0;
+}
+
+.no-results {
+  color: white;
+  text-align: center;
+}
+
+.favorite-header {
+  text-align: center;
+  color: white;
+  margin: 15px 0;
+}
+
+.active a {
+  background-color: $primary-color !important;
+  color: white !important;
+}
+
+.page-link {
+  color: $primary-color !important;
+}

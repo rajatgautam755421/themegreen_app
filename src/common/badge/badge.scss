@@ -1,0 +1,19 @@
+@import "../../global.scss";
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: $border-radius-sm;
+  font-size: $xs-font-size;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.badge-primary {
+  background-color: $primary-color;
+  color: #fff;
+}
+.badge-secondary {
+  background-color: $secondary-color;
+  color: #fff;
+}

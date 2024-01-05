@@ -1,0 +1,75 @@
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+
+  .disable-filter {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  // Icon Styles
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; // Adjust icon size as needed
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+  }
+
+  // Search Bar Styles
+  .search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+
+    .filter-icon {
+      margin-left: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+  }
+
+  // Media Queries for Responsiveness
+
+  // For small devices
+  @media (max-width: 767px) {
+    flex-direction: column;
+
+    .icon {
+      margin: 5px 0;
+    }
+
+    .search-bar {
+      max-width: 100%;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  }
+
+  // For medium devices
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .search-bar {
+      max-width: 200px;
+    }
+  }
+
+  // For large devices
+  @media (min-width: 1024px) {
+    .search-bar {
+      max-width: 300px;
+    }
+  }
+}

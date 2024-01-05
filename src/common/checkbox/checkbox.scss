@@ -1,0 +1,56 @@
+@import "../../global.scss";
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+}
+
+.checkbox-label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 2px solid #999;
+  border-radius: 3px;
+}
+
+.checkbox-input:checked ~ .checkbox-custom {
+  background-color: $primary-color;
+}
+
+.checkbox-custom:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-input:checked ~ .checkbox-custom:after {
+  display: block;
+}
+
+.checkbox-custom:after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

@@ -1,0 +1,46 @@
+@import "../../global.scss";
+
+.btn {
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.6s ease, color 0.3s ease;
+  color: $primary-color; // Set the default text color
+
+  &.small {
+    font-size: $sm-font-size;
+  }
+
+  &.medium {
+    font-size: $md-font-size;
+  }
+
+  &.large {
+    font-size: $lg-font-size;
+  }
+
+  &.primary {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #ffffff;
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    border: 2px solid $secondary-color;
+
+    &:hover {
+      background-color: $secondary-color;
+      color: #ffffff;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
